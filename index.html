@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <script src=’index.js’ defer></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <title>Programming Test</title>
+  <style type="text/css">
+        table {
+            width:  100%;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+        }
+        .scrollingTable {
+            width: 30em;
+            overflow-y: auto;
+        }
+    </style>
+    <script type="text/javascript">
+        function makeTableScroll() {
+            // Constant retrieved from server-side via JSP
+            var maxRows = 4;
+
+            var table = document.getElementById('myTable');
+            var wrapper = table.parentNode;
+            var rowsInTable = table.rows.length;
+            var height = 0;
+            if (rowsInTable > maxRows) {
+                for (var i = 0; i < maxRows; i++) {
+                    height += table.rows[i].clientHeight;
+                }
+                wrapper.style.height = height + "px";
+            }
+        }
+        fetch(https://apis-3015.lib.cmu.ac.th/exam/items)
+          .then(function() {
+
+          })
+          .catch(function() {
+
+          });
+    </script>
+</head>
+<body>
+  <div class="container" id="page-container">
+    <header class="text-center">
+      <h1>Programming Test</h1>
+    </header>
+    <main>
+      <div class="row">
+        <form class="col-sm-8 offset-sm-2" id="city-form">
+          <div class="form-group">
+            <label for="city">Search</label>
+            <select id="cars" name="cars">
+              <option value="title">Title</option>
+              <option value="authors">Author</option>
+              <option value="isbn">ISBN</option>
+            </select>
+            <input type="text" id="city" class="form-control" required>
+          </div>
+          <button class="btn btn-success" type="submit">Go</button>
+        </form>
+        <div class="form-group">
+          <p><b><label>Filter</label></b></p>
+          <input type="checkbox" id="facet.categories[0].name" name="facet.categories[0].name" value="facet.categories[0].name">
+          <label for="facet.categories[0].name">facet.categories[0].name</label><br>
+          <input type="checkbox" id="facet.categories[1].name" name="facet.categories[1].name" value="facet.categories[1].name">
+          <label for="facet.categories[1].name">facet.categories[1].name</label><br>
+          <input type="checkbox" id="facet.categories[2].name" name="facet.categories[2].name" value="facet.categories[2].name">
+          <label for="facet.categories[2].name">facet.categories[2].name</label><br>
+          <input type="checkbox" id="facet.categories[3].name" name="facet.categories[3].name" value="facet.categories[3].name">
+          <label for="facet.categories[3].name">facet.categories[3].name</label><br>
+          <input type="checkbox" id="facet.categories[4].name" name="facet.categories[4].name" value="facet.categories[4].name">
+          <label for="facet.categories[4].name">facet.categories[4].name</label><br>
+          <input type="checkbox" id="facet.categories[5].name" name="facet.categories[5].name" value="facet.categories[5].name">
+          <label for="facet.categories[5].name">facet.categories[5].name</label><br>
+          <input type="checkbox" id="facet.categories[6].name" name="facet.categories[6].name" value="facet.categories[6].name">
+          <label for="facet.categories[6].name">facet.categories[6].name</label><br>
+          <input type="checkbox" id="facet.categories[7].name" name="facet.categories[7].name" value="facet.categories[7].name">
+          <label for="facet.categories[7].name">facet.categories[7].name</label><br>
+          <input type="checkbox" id="facet.categories[8].name" name="facet.categories[8].name" value="facet.categories[8].name">
+          <label for="facet.categories[8].name">facet.categories[8].name</label><br>
+          <input type="checkbox" id="facet.categories[9].name" name="facet.categories[9].name" value="facet.categories[9].name">
+          <label for="facet.categories[9].name">facet.categories[9].name</label><br>
+        </div>
+      <div class="row">
+        <section id="Test" class="col-sm-8 offset-sm-2 text-center">
+        <table>
+          Result : [count] records
+          <tbody>
+            <tr style="text-align: right;"><select id="cars" name="cars">
+              <option value="page-container">1</option>
+              <option value="page-container">2</option>
+              <option value="page-container">3</option>
+            </select>
+            </tr>
+            <tr>
+              <td style="text-align: center;">Title</td>
+              <td style="text-align: center;">Sub Title</td>
+              <td style="text-align: center;">Authors</td>
+              <td style="text-align: center;">ISBN</td>
+              <td style="text-align: center;">Public Date</td>
+              <td style="text-align: center;">More</td>
+            </tr>
+          </tbody>
+            <tr>
+                <td>volumeInfo.title</td>
+                <td>volumeInfo.subtitle</td>
+                <td>volumeInfo.authors[0]
+                    volumeInfo.authors[1]</td>
+                <td>volumeInfo.industryIdentifiers[0].identifier
+                    volumeInfo.industryIdentifiers[1].identifier</td>
+                <td>volumeInfo.publishedDate</td>
+                <td><button class="btn btn-success" type="submit"><a href="moreinfo.html">READ MORE</a></button></td>
+            </tr>
+        </table>
+      </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
